@@ -9,9 +9,10 @@ package Loop;
 public class Result {
 
 	public static void main(String[] args) {
-
+			
 		java.util.Scanner sc = new java.util.Scanner(System.in);
 		
+		//printing values enter your name
 		System.out.print("Enter your name : ");
 		String name = sc.next();
 		
@@ -30,10 +31,12 @@ public class Result {
 			System.out.println(per);
 			if(per>=60)	{
 				
+				//chwck values of if condition
 				System.out.println("Your are pass ");
 				
 			}
 			else	{
+				//prining else condition
 				System.out.println("You are failed ");
 			}
 				
