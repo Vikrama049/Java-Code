@@ -1,3 +1,8 @@
+/*Print any multiplication table using for loop. take the input from the user in all the program.
+ * Name : Aditya Vikram
+ * Date :11/10/22
+ */
+
 package Loop;
 
 public class Multiplication {
