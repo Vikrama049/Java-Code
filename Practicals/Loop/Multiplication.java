@@ -1,4 +1,4 @@
-/*Print any multiplication table using for loop. take the input from the user in all the program.
+/*Print any multiplication table using for loop.
  * Name : Aditya Vikram
  * Date :11/10/22
  */
