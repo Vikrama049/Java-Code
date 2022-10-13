@@ -1,3 +1,8 @@
+/* Program to print  sum of 10 Natural Numbers using while loop.
+* Name : Aditya Vikram
+* Date : 13/10/22
+*/
+
 package Lab_13102022;
 
 public class natural_Numbers {
@@ -8,8 +13,11 @@ public class natural_Numbers {
 		int sum=0;
 		int a ;
 		int b=1;
+		
+		//Using while loop
 		while(b <= 10) 	{
 			
+			//Printing Natutal Numbers
 			System.out.print("Enter "+b+" Natural Numbers : ");
 			a = sc.nextInt();
 			if (a<=0) {
@@ -22,8 +30,6 @@ public class natural_Numbers {
 		System.out.println();
 		System.out.println("Sum of 10 natural Numbers is");
 		System.out.println(sum);
-		
-		// 
 
 	}
 }
