@@ -16,6 +16,7 @@ public class Positive_Numbers {
 		int a = 0;
 	    int sum = 0;
 		
+	    // using do-while Loop
 	    do {
 	    System.out.print("Enter a number = ");
 		a = sc.nextInt();
