@@ -9,6 +9,7 @@ public class natural_Numbers {
 
 	public static void main(String[] args) {
 		
+		//Importing Scanner
 		java.util.Scanner sc = new java.util.Scanner(System.in);
 		int sum=0;
 		int a ;
