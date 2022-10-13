@@ -1,4 +1,4 @@
-/* Program to demontrate on nested For Loop and printing Triangle
+/* Program to Print sum of only Positive numbers using do-while Loop. And take the Input from User, Enters any negative number then that number should not added to sum.
 * Name : Aditya Vikram
 * Date : 13/10/22
 */
