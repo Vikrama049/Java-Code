@@ -1,4 +1,4 @@
-/* Program : Program of multi dimensional array
+/* Program : Program for multi dimensional array
  * Name : Aditya Vikram
   * Date : 17-10-22
  */
