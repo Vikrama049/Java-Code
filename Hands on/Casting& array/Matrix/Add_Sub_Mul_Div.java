@@ -11,7 +11,7 @@ import java.util.Scanner;
 import static java.lang.System.out;
 public class Add_Sub_Mul_Div {
 
-	public static void main(String[] args) {
+	public static void main(String ... args) {
 		
 		int x, y, i, j;
 		Scanner sc = new Scanner(System.in);
