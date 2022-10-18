@@ -4,8 +4,6 @@
  */
 
 package Matrix;
-
-import static java.lang.System.out;
 //Importing Scanner
 import java.util.Scanner;
 import static java.lang.System.out;
