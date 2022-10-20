@@ -1,4 +1,4 @@
-/* Program to find Even number from Array 
+/* Program to Enter even number in array and print in AscendingOrder 
  * name : Aditya Vikram
  * Date : 20-10-22
  */
