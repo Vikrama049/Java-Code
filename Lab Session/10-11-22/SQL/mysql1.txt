@@ -71,7 +71,6 @@ mysql> select * from managers;
 +------+--------+-----------+
 5 rows in set (0.00 sec)
 
-************************************************************************************
 mysql> insert into managers values(6,'Pranay','Firozpur');
 Query OK, 1 row affected (0.00 sec)
 
@@ -87,7 +86,7 @@ mysql> select * from managers;
 |    6 | Pranay | Firozpur  |
 +------+--------+-----------+
 6 rows in set (0.00 sec)
-********************************************************************
+
 mysql> select students1.name, students1.course_name, managers.m_name from managers
     -> INNER JOIN students1
     -> ON students1.id=managers.m_id;
@@ -101,7 +100,7 @@ mysql> select students1.name, students1.course_name, managers.m_name from manage
 | bala    | Photography   | Masud  |
 +---------+---------------+--------+
 5 rows in set (0.00 sec)
-*******************************************************************
+
 mysql> select students1.name, students1.course_name, managers.m_name from managers
     -> LEFT JOIN students1
     -> ON students1.id=managers.m_id;
@@ -116,7 +115,7 @@ mysql> select students1.name, students1.course_name, managers.m_name from manage
 | NULL    | NULL          | Pranay |
 +---------+---------------+--------+
 6 rows in set (0.00 sec)
-**************************************************************
+
 mysql> select students1.name, students1.course_name, managers.m_name from managers
     -> RIGHT JOIN students1
     -> ON students1.id=managers.m_id;
@@ -130,7 +129,7 @@ mysql> select students1.name, students1.course_name, managers.m_name from manage
 | bala    | Photography   | Masud  |
 +---------+---------------+--------+
 5 rows in set (0.00 sec)
-********************************************************************\
+
 mysql> select students1.name, students1.course_name, managers.m_name from students1
     -> CROSS JOIN managers
     -> ON students1.id=managers.m_id;
