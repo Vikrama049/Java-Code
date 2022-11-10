@@ -1,0 +1,116 @@
+mysql> create table students(
+    -> s_id int not null,
+    -> s_name varchar(30) not null,
+    -> course_name varchar(30) not null,
+    -> primary key(s_id));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table officers(
+    -> of_id int not null,
+    -> of_name varchar(30) not null,
+    -> address varchar(30) not null,
+    -> primary key(of_id));
+
+mysql> use world;
+Database changed
+mysql> select * from students;
++------+-----------+-------------+
+| s_id | s_name    | course_name |
++------+-----------+-------------+
+|    1 | bhakti    | java        |
+|    2 | akash     | java        |
+|    3 | aditya    | mongodb     |
+|    4 | sanskruti | hadoop      |
++------+-----------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from officers;
++-------+---------+---------+
+| of_id | of_name | address |
++-------+---------+---------+
+|     1 | Ajeet   | mumbai  |
+|     2 | Rahul   | lucknow |
+|     3 | Deepika | lucknow |
++-------+---------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select officers.of_name,officers.address,students.s_name from officers
+    -> INNER JOIN students
+    -> ON officers.of_id=students.s_id;
++---------+---------+--------+
+| of_name | address | s_name |
++---------+---------+--------+
+| Ajeet   | mumbai  | bhakti |
+| Rahul   | lucknow | akash  |
+| Deepika | lucknow | aditya |
++---------+---------+--------+
+3 rows in set (0.00 sec)
+
+mysql> select officers.of_name,officers.address,students.s_name from officers
+    -> LEFT JOIN students
+    -> ON officers.of_id=students.s_id;
++---------+---------+--------+
+| of_name | address | s_name |
++---------+---------+--------+
+| Ajeet   | mumbai  | bhakti |
+| Rahul   | lucknow | akash  |
+| Deepika | lucknow | aditya |
++---------+---------+--------+
+3 rows in set (0.00 sec)
+
+mysql> insert into officers value(4,'vimal','faizabad');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into officers value(5,'Anjali','faizabad');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from officers;
++-------+---------+----------+
+| of_id | of_name | address  |
++-------+---------+----------+
+|     1 | Ajeet   | mumbai   |
+|     2 | Rahul   | lucknow  |
+|     3 | Deepika | lucknow  |
+|     4 | vimal   | faizabad |
+|     5 | Anjali  | faizabad |
++-------+---------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select officers.of_name,officers.address,students.s_name from officers
+    -> LEFT JOIN students
+    -> ON officers.of_id=students.s_id;
++---------+----------+-----------+
+| of_name | address  | s_name    |
++---------+----------+-----------+
+| Ajeet   | mumbai   | bhakti    |
+| Rahul   | lucknow  | akash     |
+| Deepika | lucknow  | aditya    |
+| vimal   | faizabad | sanskruti |
+| Anjali  | faizabad | NULL      |
++---------+----------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from students;
++------+-----------+-------------+
+| s_id | s_name    | course_name |
++------+-----------+-------------+
+|    1 | bhakti    | java        |
+|    2 | akash     | java        |
+|    3 | aditya    | mongodb     |
+|    4 | sanskruti | hadoop      |
++------+-----------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> select officers.of_name,officers.address,students.s_name from officers
+    -> RIGHT JOIN students
+    -> ON officers.of_id=students.s_id;
++---------+----------+-----------+
+| of_name | address  | s_name    |
++---------+----------+-----------+
+| Ajeet   | mumbai   | bhakti    |
+| Rahul   | lucknow  | akash     |
+| Deepika | lucknow  | aditya    |
+| vimal   | faizabad | sanskruti |
++---------+----------+-----------+
+4 rows in set (0.00 sec)
+
