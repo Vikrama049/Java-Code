@@ -1,0 +1,61 @@
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 384
+Server version: 8.0.31 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databses;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databses' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| data               |
+| info               |
+| information        |
+| information_schema |
+| mysql              |
+| performance_schema |
+| student            |
+| sys                |
++--------------------+
+8 rows in set (0.06 sec)
+
+mysql> use info;
+Database changed
+mysql> show tables;
++--------------------+
+| Tables_in_info     |
++--------------------+
+| hibernate_sequence |
+| student_details    |
+| students           |
++--------------------+
+3 rows in set (0.04 sec)
+
+mysql> desc student_details;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | int          | NO   | PRI | NULL    | auto_increment |
+| student_email | varchar(255) | YES  |     | NULL    |                |
+| student_phone | bigint       | YES  |     | NULL    |                |
+| student_name  | varchar(255) | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.03 sec)
+
+mysql> select * from student_details;
++----+---------------+---------------+--------------+
+| id | student_email | student_phone | student_name |
++----+---------------+---------------+--------------+
+|  1 | adityav       |    8599687452 | Aditya       |
+|  2 | xyz@yahoo.com |    7788995566 | arun         |
++----+---------------+---------------+--------------+
+2 rows in set (0.00 sec)
